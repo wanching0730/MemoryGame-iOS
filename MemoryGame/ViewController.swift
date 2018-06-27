@@ -40,21 +40,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func chechResultBtnPressed(_ sender: UIButton) {
-        var count: Int = 0
-        
-        for textField in wordsTextFieldCollection {
-            if textField.text == words[count] {
-                textField.textColor = UIColor.green
-            } else {
-                textField.textColor = UIColor.red
-            }
-            count += 1
-        }
+        checkResult()
     }
     
     
     @IBAction func giveUpBtnPressed(_ sender: UIButton) {
         showAllWords()
+        checkResult()
     }
     
 
@@ -70,7 +62,21 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    func checkResult() {
+        var count: Int = 0
+        
+        for textField in wordsTextFieldCollection {
+            if textField.text == words[count] {
+                textField.textColor = UIColor.green
+            } else if textField.text == "" {
+                textField.backgroundColor = UIColor.darkGray
+            } else {
+                textField.textColor = UIColor.red
+            }
+            
+            count += 1
+        }
+    }
     
 }
 
