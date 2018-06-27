@@ -11,13 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet var wordsLabel1: [UILabel]!
-    @IBOutlet var wordsLabel2: [UILabel]!
-    @IBOutlet var wordsLabel3: [UILabel]!
-    @IBOutlet var wordsLabel4: [UILabel]!
-    @IBOutlet var wordsLabel5: [UILabel]!
-    @IBOutlet var wordsLabel6: [UILabel]!
-    @IBOutlet var wordsLabel7: [UILabel]!
+    
+    @IBOutlet var wordsLabelCollection: [UILabel]!
+    
     
     @IBOutlet weak var wordsTextField1: UITextField!
     @IBOutlet weak var wordsTextField2: UITextField!
@@ -27,12 +23,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var wordsTextField6: UITextField!
     @IBOutlet weak var wordsTextField7: UITextField!
     
-    var words = ["hello", "hallo", "hi", "yeah"]
+    var words = ["hello", "hallo", "hi", "yeah", "wohoo", "yess", "nooo"]
+    var count: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        for label in wordsLabelCollection {
+            label.text = words[count]
+            count += 1
+        }
 
     }
 
