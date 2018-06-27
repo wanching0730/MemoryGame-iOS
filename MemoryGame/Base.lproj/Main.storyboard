@@ -97,6 +97,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="wordsTextField1:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="8Af-ne-NeR"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsW-Dz-GnM">
                                 <rect key="frame" x="32" y="279" width="97" height="30"/>
@@ -154,6 +157,20 @@
                     </view>
                     <connections>
                         <outlet property="wordsLabel" destination="IjL-bW-urL" id="tQX-xQ-Ule"/>
+                        <outlet property="wordsLabel1" destination="3au-NX-k1D" id="b0e-b8-lIw"/>
+                        <outlet property="wordsLabel2" destination="IjL-bW-urL" id="2zQ-Lo-1yk"/>
+                        <outlet property="wordsLabel3" destination="RVu-6g-Aly" id="36F-KU-X2L"/>
+                        <outlet property="wordsLabel4" destination="WpR-zS-rso" id="iDn-vn-8Nn"/>
+                        <outlet property="wordsLabel5" destination="QCM-wd-weq" id="Rvr-4P-uIr"/>
+                        <outlet property="wordsLabel6" destination="zhc-la-PJr" id="CI1-71-6By"/>
+                        <outlet property="wordsLabel7" destination="w8x-Rd-WZ2" id="HSf-XX-6Bx"/>
+                        <outlet property="wordsTextField1" destination="dwW-aA-V9B" id="MZ1-RA-2lQ"/>
+                        <outlet property="wordsTextField2" destination="rsW-Dz-GnM" id="u0J-mE-h7J"/>
+                        <outlet property="wordsTextField3" destination="lFd-SF-E26" id="eSU-Po-sSE"/>
+                        <outlet property="wordsTextField4" destination="9aw-w8-xqK" id="n3N-f0-LwY"/>
+                        <outlet property="wordsTextField5" destination="SgY-SB-BDW" id="MzW-ue-03c"/>
+                        <outlet property="wordsTextField6" destination="6hG-hq-Flm" id="Ziv-cj-9FI"/>
+                        <outlet property="wordsTextField7" destination="LSN-DT-dmU" id="R2N-H5-IY4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

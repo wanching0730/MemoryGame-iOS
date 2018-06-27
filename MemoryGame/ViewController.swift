@@ -10,9 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var wordsLabel: UILabel!
     
+    @IBOutlet weak var wordsLabel1: UILabel!
+    @IBOutlet weak var wordsLabel2: UILabel!
+    @IBOutlet weak var wordsLabel3: UILabel!
+    @IBOutlet weak var wordsLabel4: UILabel!
+    @IBOutlet weak var wordsLabel5: UILabel!
+    @IBOutlet weak var wordsLabel6: UILabel!
+    @IBOutlet weak var wordsLabel7: UILabel!
     
+    @IBOutlet weak var wordsTextField1: UITextField!
+    @IBOutlet weak var wordsTextField2: UITextField!
+    @IBOutlet weak var wordsTextField3: UITextField!
+    @IBOutlet weak var wordsTextField4: UITextField!
+    @IBOutlet weak var wordsTextField5: UITextField!
+    @IBOutlet weak var wordsTextField6: UITextField!
+    @IBOutlet weak var wordsTextField7: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
