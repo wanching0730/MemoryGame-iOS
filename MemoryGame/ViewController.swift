@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     
     var words = [
-        ["hello", "hallo", "hi", "yeah", "wohoo", "yess", "nooo"],
+        ["utar", "ucsi", "usm", "um", "taylor", "sunway", "tarc"],
         ["php", "java", "python", "javascript", "swift", "css", "html"],
         ["dog", "cat", "mouse", "elephant", "donkey", "rat", "rabbit"],
         ["blue", "red", "yellow", "green", "grey", "white", "purple"],
