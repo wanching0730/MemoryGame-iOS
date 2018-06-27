@@ -13,9 +13,11 @@
 		300D308320E34F3400A68C8A /* MemoryGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 300D308120E34F3400A68C8A /* MemoryGame.xcdatamodeld */; };
 		300D308520E34F3400A68C8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300D308420E34F3400A68C8A /* Assets.xcassets */; };
 		300D308820E34F3400A68C8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300D308620E34F3400A68C8A /* LaunchScreen.storyboard */; };
+		73F13C7001AF58219E6EFF47 /* Pods_MemoryGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27988DBB6AD5E2B197211EF8 /* Pods_MemoryGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27988DBB6AD5E2B197211EF8 /* Pods_MemoryGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		300D307720E34F3400A68C8A /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		300D307A20E34F3400A68C8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		300D307C20E34F3400A68C8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		300D308420E34F3400A68C8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		300D308720E34F3400A68C8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		300D308920E34F3400A68C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82825FF2ED1C53DE41581651 /* Pods-MemoryGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame.release.xcconfig"; sourceTree = "<group>"; };
+		85FE63FC80199EEBFB3866CD /* Pods-MemoryGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73F13C7001AF58219E6EFF47 /* Pods_MemoryGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				300D307920E34F3400A68C8A /* MemoryGame */,
 				300D307820E34F3400A68C8A /* Products */,
+				4EDBAB7AE17554E6F63B4093 /* Pods */,
+				5F46B71747E1EDEA970126FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = MemoryGame;
 			sourceTree = "<group>";
 		};
+		4EDBAB7AE17554E6F63B4093 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85FE63FC80199EEBFB3866CD /* Pods-MemoryGame.debug.xcconfig */,
+				82825FF2ED1C53DE41581651 /* Pods-MemoryGame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5F46B71747E1EDEA970126FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27988DBB6AD5E2B197211EF8 /* Pods_MemoryGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 300D308C20E34F3400A68C8A /* Build configuration list for PBXNativeTarget "MemoryGame" */;
 			buildPhases = (
+				9D31A779F7B98D29210DC3FA /* [CP] Check Pods Manifest.lock */,
 				300D307320E34F3400A68C8A /* Sources */,
 				300D307420E34F3400A68C8A /* Frameworks */,
 				300D307520E34F3400A68C8A /* Resources */,
+				80E6F1360F1A09B20C72957E /* [CP] Embed Pods Frameworks */,
+				EEB87CBAC8B9AB30AB2E32B9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80E6F1360F1A09B20C72957E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D31A779F7B98D29210DC3FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemoryGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEB87CBAC8B9AB30AB2E32B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MemoryGame/Pods-MemoryGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		300D307320E34F3400A68C8A /* Sources */ = {
@@ -276,6 +357,7 @@
 		};
 		300D308D20E34F3400A68C8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85FE63FC80199EEBFB3866CD /* Pods-MemoryGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +372,7 @@
 		};
 		300D308E20E34F3400A68C8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82825FF2ED1C53DE41581651 /* Pods-MemoryGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
