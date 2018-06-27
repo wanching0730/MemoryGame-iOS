@@ -11,13 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var wordsLabel1: UILabel!
-    @IBOutlet weak var wordsLabel2: UILabel!
-    @IBOutlet weak var wordsLabel3: UILabel!
-    @IBOutlet weak var wordsLabel4: UILabel!
-    @IBOutlet weak var wordsLabel5: UILabel!
-    @IBOutlet weak var wordsLabel6: UILabel!
-    @IBOutlet weak var wordsLabel7: UILabel!
+    @IBOutlet var wordsLabel1: [UILabel]!
+    @IBOutlet var wordsLabel2: [UILabel]!
+    @IBOutlet var wordsLabel3: [UILabel]!
+    @IBOutlet var wordsLabel4: [UILabel]!
+    @IBOutlet var wordsLabel5: [UILabel]!
+    @IBOutlet var wordsLabel6: [UILabel]!
+    @IBOutlet var wordsLabel7: [UILabel]!
     
     @IBOutlet weak var wordsTextField1: UITextField!
     @IBOutlet weak var wordsTextField2: UITextField!
@@ -27,15 +27,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var wordsTextField6: UITextField!
     @IBOutlet weak var wordsTextField7: UITextField!
     
+    var words = ["hello", "hallo", "hi", "yeah"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
 
     @IBAction func startBtnPressed(_ sender: UIButton) {
     }
@@ -50,6 +54,10 @@ class ViewController: UIViewController {
     
 
     @IBAction func repeatBtnPressed(_ sender: UIButton) {
+    }
+    
+    func showWords() {
+        
     }
     
 }
