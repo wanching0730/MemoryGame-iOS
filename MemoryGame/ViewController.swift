@@ -15,19 +15,16 @@ class ViewController: UIViewController {
     @IBOutlet var wordsLabelCollection: [UILabel]!
     
     
-    @IBOutlet weak var wordsTextField1: UITextField!
-    @IBOutlet weak var wordsTextField2: UITextField!
-    @IBOutlet weak var wordsTextField3: UITextField!
-    @IBOutlet weak var wordsTextField4: UITextField!
-    @IBOutlet weak var wordsTextField5: UITextField!
-    @IBOutlet weak var wordsTextField6: UITextField!
-    @IBOutlet weak var wordsTextField7: UITextField!
+    @IBOutlet var wordsTextFieldCollection: [UITextField]!
+    
     
     var words = ["hello", "hallo", "hi", "yeah", "wohoo", "yess", "nooo"]
-    var count: Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var count: Int = 0
         
         for label in wordsLabelCollection {
             label.text = words[count]
@@ -49,6 +46,16 @@ class ViewController: UIViewController {
     
     
     @IBAction func chechResultBtnPressed(_ sender: UIButton) {
+        var count: Int = 0
+        
+        for textField in wordsTextFieldCollection {
+            if textField.text == words[count] {
+                textField.textColor = UIColor.green
+            } else {
+                textField.textColor = UIColor.red
+            }
+            count += 1
+        }
     }
     
     
@@ -59,9 +66,7 @@ class ViewController: UIViewController {
     @IBAction func repeatBtnPressed(_ sender: UIButton) {
     }
     
-    func showWords() {
-        
-    }
+    
     
 }
 
