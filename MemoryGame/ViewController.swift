@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
-    
     @IBOutlet var wordsLabelCollection: [UILabel]!
     
     
@@ -38,7 +36,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+
     @IBAction func chechResultBtnPressed(_ sender: UIButton) {
         checkResult()
     }
@@ -51,6 +49,7 @@ class ViewController: UIViewController {
     
 
     @IBAction func repeatBtnPressed(_ sender: UIButton) {
+        resetAll()
     }
     
     func showAllWords() {
@@ -76,6 +75,15 @@ class ViewController: UIViewController {
             
             count += 1
         }
+    }
+    
+    func resetAll() {
+        for textField in wordsTextFieldCollection {
+            textField.text = ""
+            textField.backgroundColor = UIColor.clear
+        }
+        
+        showAllWords()
     }
     
 }
