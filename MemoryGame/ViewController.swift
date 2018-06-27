@@ -64,6 +64,7 @@ class ViewController: UIViewController {
 
     @IBAction func repeatBtnPressed(_ sender: UIButton) {
         resetAll()
+        showAllWords()
     }
     
     func showAllWords() {
@@ -97,8 +98,8 @@ class ViewController: UIViewController {
             textField.textColor = UIColor.black
             textField.backgroundColor = UIColor.clear
         }
+        
         arrayCount += 1
-        showAllWords()
     }
     
 }
