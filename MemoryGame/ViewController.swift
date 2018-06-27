@@ -42,6 +42,9 @@ class ViewController: UIViewController {
 //    }
 
     @IBAction func startBtnPressed(_ sender: UIButton) {
+        for label in wordsLabelCollection {
+            label.text = ""
+        }
     }
     
     
