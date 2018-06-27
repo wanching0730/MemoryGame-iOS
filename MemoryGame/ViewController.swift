@@ -12,9 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var wordsLabelCollection: [UILabel]!
     
-    
     @IBOutlet var wordsTextFieldCollection: [UITextField]!
-    
     
     var words = [
         ["utar", "ucsi", "usm", "um", "taylor", "sunway", "tarc"],
@@ -30,6 +28,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for textField in wordsTextFieldCollection {
+            textField.isUserInteractionEnabled = false
+        }
+        
         showAllWords()
     }
 
@@ -41,6 +43,10 @@ class ViewController: UIViewController {
     @IBAction func startBtnPressed(_ sender: UIButton) {
         for label in wordsLabelCollection {
             label.text = ""
+        }
+        
+        for textField in wordsTextFieldCollection {
+            textField.isUserInteractionEnabled = true
         }
     }
     
