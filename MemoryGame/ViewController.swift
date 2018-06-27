@@ -32,6 +32,12 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func giveUpBtnPressed(_ sender: UIButton) {
+    }
+    
+
+    @IBAction func repeatBtnPressed(_ sender: UIButton) {
+    }
     
 }
 
