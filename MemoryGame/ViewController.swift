@@ -16,7 +16,15 @@ class ViewController: UIViewController {
     @IBOutlet var wordsTextFieldCollection: [UITextField]!
     
     
-    var words = ["hello", "hallo", "hi", "yeah", "wohoo", "yess", "nooo"]
+    var words = [
+        ["hello", "hallo", "hi", "yeah", "wohoo", "yess", "nooo"],
+        ["php", "java", "python", "javascript", "swift", "css", "html"],
+        ["dog", "cat", "mouse", "elephant", "donkey", "rat", "rabbit"],
+        ["blue", "red", "yellow", "green", "grey", "white", "purple"],
+        ["square", "circle", "oval", "cube", "triangle", "cuboid", "pyramid"],
+    ]
+    
+    var arrayCount: Int = 0
     
     
     override func viewDidLoad() {
@@ -56,7 +64,7 @@ class ViewController: UIViewController {
         var count: Int = 0
         
         for label in wordsLabelCollection {
-            label.text = words[count]
+            label.text = words[arrayCount][count]
             count += 1
         }
     }
@@ -65,7 +73,7 @@ class ViewController: UIViewController {
         var count: Int = 0
         
         for textField in wordsTextFieldCollection {
-            if textField.text == words[count] {
+            if textField.text == words[arrayCount][count] {
                 textField.textColor = UIColor.green
             } else if textField.text == "" {
                 textField.backgroundColor = UIColor.darkGray
@@ -80,9 +88,10 @@ class ViewController: UIViewController {
     func resetAll() {
         for textField in wordsTextFieldCollection {
             textField.text = ""
+            textField.textColor = UIColor.black
             textField.backgroundColor = UIColor.clear
         }
-        
+        arrayCount += 1
         showAllWords()
     }
     
