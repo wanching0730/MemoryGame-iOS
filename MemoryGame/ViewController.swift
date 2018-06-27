@@ -24,13 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var count: Int = 0
-        
-        for label in wordsLabelCollection {
-            label.text = words[count]
-            count += 1
-        }
-
+        showAllWords()
     }
 
 //    override func didReceiveMemoryWarning() {
@@ -60,10 +54,20 @@ class ViewController: UIViewController {
     
     
     @IBAction func giveUpBtnPressed(_ sender: UIButton) {
+        showAllWords()
     }
     
 
     @IBAction func repeatBtnPressed(_ sender: UIButton) {
+    }
+    
+    func showAllWords() {
+        var count: Int = 0
+        
+        for label in wordsLabelCollection {
+            label.text = words[count]
+            count += 1
+        }
     }
     
     
