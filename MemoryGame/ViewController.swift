@@ -32,9 +32,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for textField in wordsTextFieldCollection {
-            textField.isUserInteractionEnabled = false
-        }
+        unableInput()
         
         progressLabel.text = "\(arrayCount+1) / 5"
         
@@ -71,6 +69,7 @@ class ViewController: UIViewController {
     @IBAction func repeatBtnPressed(_ sender: UIButton) {
         resetAll()
         updateUI()
+        unableInput()
         showAllWords()
     }
     
@@ -103,7 +102,7 @@ class ViewController: UIViewController {
         for textField in wordsTextFieldCollection {
             textField.text = ""
             textField.textColor = UIColor.black
-            textField.backgroundColor = UIColor.clear
+            textField.backgroundColor = UIColor.white
         }
         
         if arrayCount < 4 {
@@ -118,6 +117,12 @@ class ViewController: UIViewController {
         progressBar.frame.size.width = (view.frame.size.width / 5) * CGFloat(arrayCount + 1)
         
         progressLabel.text = "\(arrayCount+1) / 5"
+    }
+    
+    func unableInput() {
+        for textField in wordsTextFieldCollection {
+            textField.isUserInteractionEnabled = false
+        }
     }
     
 }
