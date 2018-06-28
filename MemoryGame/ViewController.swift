@@ -101,9 +101,16 @@ class ViewController: UIViewController {
             textField.backgroundColor = UIColor.clear
         }
         
-        progressBar.frame.size.width = (view.frame.size.width / 4) * CGFloat(arrayCount + 1)
+        if arrayCount < 4 {
+            arrayCount += 1
+        } else {
+            arrayCount = 0
+        }
         
-        arrayCount += 1
+        progressBar.frame.size.width = (view.frame.size.width / 5) * CGFloat(arrayCount + 1)
+        
+        
+        
     }
     
 }
