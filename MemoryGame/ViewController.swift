@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var wordsTextFieldCollection: [UITextField]!
     
+    @IBOutlet weak var progressLabel: UILabel!
+    
     @IBOutlet weak var progressBar: UIView!
     
     var words = [
@@ -33,6 +35,8 @@ class ViewController: UIViewController {
         for textField in wordsTextFieldCollection {
             textField.isUserInteractionEnabled = false
         }
+        
+        progressLabel.text = "\(arrayCount+1) / 5"
         
         showAllWords()
     }
@@ -66,6 +70,7 @@ class ViewController: UIViewController {
 
     @IBAction func repeatBtnPressed(_ sender: UIButton) {
         resetAll()
+        updateUI()
         showAllWords()
     }
     
@@ -107,10 +112,12 @@ class ViewController: UIViewController {
             arrayCount = 0
         }
         
+    }
+    
+    func updateUI() {
         progressBar.frame.size.width = (view.frame.size.width / 5) * CGFloat(arrayCount + 1)
         
-        
-        
+        progressLabel.text = "\(arrayCount+1) / 5"
     }
     
 }
