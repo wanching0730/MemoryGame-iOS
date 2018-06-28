@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var wordsTextFieldCollection: [UITextField]!
     
+    @IBOutlet weak var progressBar: UIView!
+    
     var words = [
         ["utar", "ucsi", "usm", "um", "taylor", "sunway", "tarc"],
         ["php", "java", "python", "javascript", "swift", "css", "html"],
@@ -98,6 +100,8 @@ class ViewController: UIViewController {
             textField.textColor = UIColor.black
             textField.backgroundColor = UIColor.clear
         }
+        
+        progressBar.frame.size.width = (view.frame.size.width / 4) * CGFloat(arrayCount + 1)
         
         arrayCount += 1
     }

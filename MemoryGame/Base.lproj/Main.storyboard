@@ -148,11 +148,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K6Y-8Y-T04">
+                                <rect key="frame" x="0.0" y="639" width="72" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39627540579999998" green="1" blue="0.99549642729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="progressBar" destination="K6Y-8Y-T04" id="TMh-Mg-566"/>
                         <outletCollection property="wordsLabelCollection" destination="NSG-aY-h8w" collectionClass="NSMutableArray" id="756-ND-LUH"/>
                         <outletCollection property="wordsLabelCollection" destination="du2-XA-2Ob" collectionClass="NSMutableArray" id="dHr-DS-mZz"/>
                         <outletCollection property="wordsLabelCollection" destination="73O-QU-cRV" collectionClass="NSMutableArray" id="g87-wb-HNc"/>
