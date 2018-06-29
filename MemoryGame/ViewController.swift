@@ -119,22 +119,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if arrayCount < 4 {
             arrayCount += 1
         } else {
-            let alertController = UIAlertController(
-                title: "The End",
-                message: "The game is ended. Click Continue to repeat the game",
-                preferredStyle: .alert
-            )
-            
-            let cancelAction = UIAlertAction(
-                title:"Continue",
-                style: UIAlertActionStyle.cancel,
-                handler: nil
-            )
-            
-            alertController.addAction(cancelAction)
-            
-            self.present(alertController, animated: true, completion: nil)
-            
+            showAlert()
             self.arrayCount = 0
         }
         
@@ -150,6 +135,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
         for textField in wordsTextFieldCollection {
             textField.isUserInteractionEnabled = false
         }
+    }
+    
+    func showAlert() {
+        let alertController = UIAlertController(
+            title: "The End",
+            message: "The game is ended. Click Continue to repeat the game",
+            preferredStyle: .alert
+        )
+        
+        let cancelAction = UIAlertAction(
+            title:"Continue",
+            style: UIAlertActionStyle.cancel,
+            handler: nil
+        )
+        
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }
