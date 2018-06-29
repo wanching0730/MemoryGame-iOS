@@ -107,9 +107,25 @@ class ViewController: UIViewController {
         }
         
         if arrayCount < 4 {
-            arrayCount += 1
+            arrayCount += 1 
         } else {
-            arrayCount = 0
+            let alertController = UIAlertController(
+                title: "The End",
+                message: "The game is ended. Click Continue to repeat the game",
+                preferredStyle: .alert
+            )
+            
+            let cancelAction = UIAlertAction(
+                title:"Continue",
+                style: UIAlertActionStyle.cancel,
+                handler: nil
+            )
+            
+            alertController.addAction(cancelAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+            self.arrayCount = 0
         }
         
     }
