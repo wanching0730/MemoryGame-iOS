@@ -56,6 +56,7 @@ class ViewController: UIViewController {
     
 
     @IBAction func chechResultBtnPressed(_ sender: UIButton) {
+        showAllWords()
         checkResult()
     }
     
