@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var wordsLabelCollection: [UILabel]!
     
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         unableInput()
         
         progressLabel.text = "\(arrayCount+1) / 5"
@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         
         for textField in wordsTextFieldCollection {
             textField.isUserInteractionEnabled = true
+            textField.delegate = self
         }
     }
     
@@ -72,6 +73,15 @@ class ViewController: UIViewController {
         updateUI()
         unableInput()
         showAllWords()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     func showAllWords() {
@@ -107,7 +117,7 @@ class ViewController: UIViewController {
         }
         
         if arrayCount < 4 {
-            arrayCount += 1 
+            arrayCount += 1
         } else {
             let alertController = UIAlertController(
                 title: "The End",
