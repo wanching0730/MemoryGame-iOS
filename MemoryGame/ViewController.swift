@@ -69,8 +69,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBAction func repeatBtnPressed(_ sender: UIButton) {
+        if arrayCount == 4 {
+            showAlert()
+        }
         resetAll()
-        updateUI()
+        updateGameProgress()
         unableInput()
         showAllWords()
     }
@@ -119,13 +122,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if arrayCount < 4 {
             arrayCount = arrayCount + 1
         } else {
-            showAlert()
             self.arrayCount = 0
         }
         
     }
     
-    func updateUI() {
+    func updateGameProgress() {
         progressBar.frame.size.width = (view.frame.size.width / 5) * CGFloat(arrayCount + 1)
         
         progressLabel.text = "\(arrayCount+1) / 5"
