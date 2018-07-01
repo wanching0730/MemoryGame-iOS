@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         ["square", "circle", "oval", "cube", "triangle", "cuboid", "pyramid"],
     ]
     
-    var arrayCount: Int = 0
+    var arrayCount: Int! = 0
     
     
     override func viewDidLoad() {
@@ -85,16 +85,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func showAllWords() {
-        var count: Int = 0
+        var count: Int! = 0
         
         for label in wordsLabelCollection {
             label.text = words[arrayCount][count]
-            count += 1
+            count = count + 1
         }
     }
     
     func checkResult() {
-        var count: Int = 0
+        var count: Int! = 0
         
         for textField in wordsTextFieldCollection {
             if textField.text == words[arrayCount][count] {
@@ -105,7 +105,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 textField.textColor = UIColor.red
             }
             
-            count += 1
+            count = count + 1
         }
     }
     
@@ -117,7 +117,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         if arrayCount < 4 {
-            arrayCount += 1
+            arrayCount = arrayCount + 1
         } else {
             showAlert()
             self.arrayCount = 0
