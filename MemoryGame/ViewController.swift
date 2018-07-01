@@ -14,6 +14,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var wordsTextFieldCollection: [UITextField]!
     
+    @IBOutlet weak var startBtn: UIButton!
+    
+    @IBOutlet weak var checkAnswerBtn: UIButton!
+    
+    @IBOutlet weak var giveUpBtn: UIButton!
+    
     @IBOutlet weak var progressLabel: UILabel!
     
     @IBOutlet weak var progressBar: UIView!
@@ -33,10 +39,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
     
         unableInput()
+        showAllWords()
+        controlButtons(enable: false)
         
         progressLabel.text = "\(arrayCount+1) / 5"
         
-        showAllWords()
     }
 
 //    override func didReceiveMemoryWarning() {
@@ -53,6 +60,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             textField.isUserInteractionEnabled = true
             textField.delegate = self
         }
+        
+        controlButtons(enable: true)
     }
     
 
@@ -64,7 +73,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func giveUpBtnPressed(_ sender: UIButton) {
         showAllWords()
-        checkResult()
     }
     
 
@@ -72,9 +80,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if arrayCount == 4 {
             showAlert()
         }
+        
         resetAll()
         updateGameProgress()
         unableInput()
+        controlButtons(enable: false)
         showAllWords()
     }
     
@@ -155,6 +165,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func controlButtons(enable: Bool) {
+        if enable {
+            checkAnswerBtn.isEnabled = true
+            giveUpBtn.isEnabled = true
+            startBtn.isEnabled = false
+        } else {
+            checkAnswerBtn.isEnabled = false
+            giveUpBtn.isEnabled = false
+            startBtn.isEnabled = true
+        }
     }
     
 }

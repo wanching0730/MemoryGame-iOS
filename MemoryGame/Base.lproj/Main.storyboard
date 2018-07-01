@@ -194,8 +194,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="checkAnswerBtn" destination="qhv-SP-RSq" id="mpG-Fo-zsE"/>
+                        <outlet property="giveUpBtn" destination="KPo-yW-bf9" id="0Ph-l2-eCO"/>
                         <outlet property="progressBar" destination="K6Y-8Y-T04" id="TMh-Mg-566"/>
                         <outlet property="progressLabel" destination="eIc-A8-2EK" id="dRS-0B-8P8"/>
+                        <outlet property="startBtn" destination="VL9-73-0NW" id="lCo-iz-fYu"/>
                         <outletCollection property="wordsLabelCollection" destination="NSG-aY-h8w" collectionClass="NSMutableArray" id="756-ND-LUH"/>
                         <outletCollection property="wordsLabelCollection" destination="du2-XA-2Ob" collectionClass="NSMutableArray" id="dHr-DS-mZz"/>
                         <outletCollection property="wordsLabelCollection" destination="73O-QU-cRV" collectionClass="NSMutableArray" id="g87-wb-HNc"/>
