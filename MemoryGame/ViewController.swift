@@ -58,6 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         for textField in wordsTextFieldCollection {
             textField.isUserInteractionEnabled = true
+            textField.backgroundColor = UIColor.white
             textField.delegate = self
         }
         
@@ -146,6 +147,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func unableInput() {
         for textField in wordsTextFieldCollection {
             textField.isUserInteractionEnabled = false
+            textField.backgroundColor = UIColor.gray
         }
     }
     
